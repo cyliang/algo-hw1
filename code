@@ -1,0 +1,7 @@
+with open("input.txt", "r") as input_file, open("output.txt", "w") as output_file:
+	seq_count = int(input_file.readline())
+	
+	for line in input_file.readlines():
+		seq = [int(x) for x in line.split()]
+		seq.sort()
+		output_file.write(' '.join(map(str, seq)) + '\n')
